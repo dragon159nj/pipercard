@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Samples</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-3.13.0.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <py-config>
+        [[fetch]] 
+        from = 'data/'
+        files = ['project_data.json']
+    </py-config>
+    <py-script src="./main.py"></py-script>
+    <main>
+        <header class="hero">
+            <div class="hero-body">
+                <h1 class="title">Pyscript Playground</h1>
+                <p class="subtitle is3">A testing grounds for <code>pyscript</code> experiements.</p>
+            </div>
+        </header>
+        <nav id="hello" class="p-navigation__nav">
+        </nav>
+        <section class="section is-medium">
+            <article id="about">
+                <h2>About this project</h2>
+                <p>Note: this home page is my first pyscript project: a website that uses <code>pyscript</code> to load content</p>
+            </article>
+            <article id="hello">
+                <h2 id="hello-title"></h2>
+                <p id="hello-description"></p>
+            </article>
+            
+        </section>
+    </main>
+    
+</body>
+</html>

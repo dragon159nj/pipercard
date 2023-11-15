@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {   "project_title": "hello",
+            "project_dir": "hello/",
+            "project_filename": "hello.html",
+            "project_description": "A simple hello world example.",
+            "project_data": {}
+        },
+        {   "project_title": "Pyper Card",
+            "project_dir": "pypercard/",
+            "project_filename": "pypercard.html",
+            "project_description": "description goes here.",
+            "project_data": {}
+        }
+    ]
+}

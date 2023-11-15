@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello - from Pyscript docs</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-3.13.0.min.css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <main>
+        <header class="hero">
+            <div class="hero-body">
+                <h1 class="title">Pyscript Playground: Hello Pyscript!</h1>
+                <p class="subtitle is3">A testing grounds for <code>pyscript</code> experiments.</p>
+            </div>
+        </header>
+        <nav></nav>
+        <section class="section is-medium">
+            <article id="hello">
+                <div id="manual-write"></div>
+                <button py-click="write_to_page('Hello dudes!')" id="manual">Say Hello</button>
+                <button py-click="clear_text('')" id="clear">Clear</button>
+                <button py-click="return_home()" id="home">Home</button>
+                <py-script>
+                    from js import window
+                    manual_div = Element("manual-write")
+                    def write_to_page(text):
+                        manual_div.element.innerText = text
+                    def clear_text(text):
+                        manual_div.element.innerText = text
+                    def return_home():
+                        window.location.href = "../index.html"
+                </py-script>
+            </article>
+            
+        </section>
+    </main>
+</body>
+</html>
