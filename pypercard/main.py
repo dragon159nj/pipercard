@@ -23,7 +23,12 @@ cards = [
     Card("card2", auto_advance=5, transition=auto_func),
     Card("card3", auto_advance=5, transition="card4"),
     Card("card4", auto_advance=5, transition="card5"),
-    Card("card5", auto_advance=5, transition="card1")
+    Card("card5", auto_advance=5, transition="card1"),
+    Card("card4", auto_advance=5, transition="card7"),
+    Card("card4", auto_advance=5, transition="card8"),
+    Card("card4", auto_advance=5, transition="card9"),
+    Card("card4", auto_advance=5, transition="card10"),
+    Card("card4", auto_advance=5, transition="card1")
 ]
 
 
