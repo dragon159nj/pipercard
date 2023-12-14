@@ -46,9 +46,10 @@ def reset(app, card):
 def next_card(app, card):
     return "school"
 
-@carousel_app.transition("boring_meal", "click", "stay")
+@carousel_app.transition("school", "click", "slack_off")
 def next_card(app, card):
-    return "stay_home"
+    return "slack"
+#   branch boring
 
 @carousel_app.transition("morning", "click", "full-course")
 def reset(app, card):
@@ -62,9 +63,17 @@ def next_card(app, card):
 def next_card(app, card):
     return "cleaned"
 
+#   branch big 
+
 @carousel_app.transition("stay_home", "click", "reset")
 def next_card(app, card):
     return "morning"
+
+@carousel_app.transition("slack", "click", "reset")
+def next_card(app, card):
+    return "morning"
+
+#   endings 
 
 carousel_app.start("morning")
 
