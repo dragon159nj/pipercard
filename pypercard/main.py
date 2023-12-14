@@ -42,6 +42,14 @@ carousel_app = App(
 def reset(app, card):
     return "boring_meal"
 
+@carousel_app.transition("boring_meal", "click", "bus")
+def next_card(app, card):
+    return "school"
+
+@carousel_app.transition("boring_meal", "click", "stay")
+def next_card(app, card):
+    return "stay_home"
+
 @carousel_app.transition("morning", "click", "full-course")
 def reset(app, card):
     return "big_meal"
@@ -50,9 +58,9 @@ def reset(app, card):
 def next_card(app, card):
     return "stay_home"
 
-@carousel_app.transition("boring_meal", "click", "stay")
+@carousel_app.transition("big_meal", "click", "clean")
 def next_card(app, card):
-    return "stay_home"
+    return "cleaned"
 
 @carousel_app.transition("stay_home", "click", "reset")
 def next_card(app, card):
